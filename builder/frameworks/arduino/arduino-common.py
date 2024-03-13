@@ -32,7 +32,9 @@ board = env.BoardConfig()
 build_mcu = env.get("BOARD_MCU", board.get("build.mcu", ""))
 
 MCU_FAMILY = board.get(
-    "build.system", "sam" if build_mcu.startswith("at91") else "samd")
+    "build.system", "sam" if build_mcu.startswith("at91") else 
+    "sam" if build_mcu.startswith("atsame70q20b") else
+    "samd")
 assert MCU_FAMILY in ("sam", "samd")
 
 framework_package = "framework-arduino-" + MCU_FAMILY
