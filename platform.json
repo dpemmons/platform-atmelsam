@@ -131,10 +131,7 @@
       "type": "uploader",
       "optional": true,
       "owner": "platformio",
-      "version": "~1.10700.0",
-      "optionalVersions": [
-        "~1.10900.0"
-      ]
+      "version": "~1.10901.0"
     },
     "tool-openocd": {
       "type": "uploader",

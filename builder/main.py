@@ -226,8 +226,6 @@ elif upload_protocol == "sam-ba":
     else:
         env.Append(UPLOADERFLAGS=[
             "--erase",
-            "-U", "true"
-            if env.BoardConfig().get("upload.native_usb", False) else "false"
         ])
     if "sam3x8e" in build_mcu:
         env.Append(UPLOADERFLAGS=["--boot"])
